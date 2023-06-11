@@ -29,6 +29,9 @@ class Scheuler
         this.#delay = nextTenMinutes.getTime() - now.getTime();
         return this;
     }
+    static everyHour(){
+        return setTimeout(this.#mainCallback, this.#delay, this.callback, 3600000);
+    }
 }
 
 module.exports = Scheuler;
