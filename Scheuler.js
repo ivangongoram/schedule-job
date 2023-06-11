@@ -18,6 +18,17 @@ class Scheuler
         this.#delay = time;
         return this;
     }
+    static nextTenMinutes(){
+        const now = new Date();
+        const minutes = now.getMinutes();
+        const remainingMinutes = 10 - (minutes % 10);
+        const nextTenMinutes = new Date();
+        nextTenMinutes.setMinutes(minutes + remainingMinutes);
+        nextTenMinutes.setSeconds(0);
+        nextTenMinutes.setMilliseconds(0);
+        this.#delay = nextTenMinutes.getTime() - now.getTime();
+        return this;
+    }
 }
 
 module.exports = Scheuler;
