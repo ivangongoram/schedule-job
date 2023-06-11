@@ -14,6 +14,10 @@ class Scheuler
         }
         setInterval(callback, time);
     }
+    static delay(time){
+        this.#delay = time;
+        return this;
+    }
 }
 
 module.exports = Scheuler;
