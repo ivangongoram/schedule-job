@@ -32,6 +32,9 @@ class Scheuler
     static everyHour(){
         return setTimeout(this.#mainCallback, this.#delay, this.callback, 3600000);
     }
+    static everyFiveMinutes(){
+        return setTimeout(this.#mainCallback, this.#delay, this.callback, 300000);
+    }
 }
 
 module.exports = Scheuler;
