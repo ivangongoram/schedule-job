@@ -8,6 +8,12 @@ class Scheuler
         this.#delay = 0;
         return this;
     }
+    static #mainCallback(callback, time){
+        if (Scheuler.#delay > 0){
+            callback();
+        }
+        setInterval(callback, time);
+    }
 }
 
 module.exports = Scheuler;
