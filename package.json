@@ -1,0 +1,26 @@
+{
+  "name": "scheuler",
+  "version": "1.0.0",
+  "description": "A powerful and user-friendly Node.js library designed to effortlessly manage cron jobs.",
+  "main": "Scheuler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cron",
+    "job",
+    "scheduler",
+    "time",
+    "delay"
+  ],
+  "author": "Ivan Gongora M <ivan.gongoram@gmail.com> (ivangongoram.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivangongoram/scheuler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ivangongoram/scheuler/issues"
+  },
+  "homepage": "https://github.com/ivangongoram/scheuler#readme",
+}
