@@ -1,8 +1,8 @@
 {
-  "name": "scheuler",
+  "name": "schedule-job",
   "version": "1.0.0",
   "description": "A powerful and user-friendly Node.js library designed to effortlessly manage cron jobs.",
-  "main": "Scheuler.js",
+  "main": "Schedule.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,10 +18,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ivangongoram/scheuler.git"
+    "url": "git+https://github.com/ivangongoram/schedule-job.git"
   },
   "bugs": {
-    "url": "https://github.com/ivangongoram/scheuler/issues"
+    "url": "https://github.com/ivangongoram/schedule-job/issues"
   },
-  "homepage": "https://github.com/ivangongoram/scheuler#readme"
+  "homepage": "https://github.com/ivangongoram/schedule-job#readme"
 }

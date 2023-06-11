@@ -1,4 +1,4 @@
-class Scheuler
+class Schedule
 {
     static callback;
     static delay;
@@ -33,15 +33,15 @@ class Scheuler
     static everyMinute(){
         return setTimeout(this.#mainCallback, this.delay, this.callback, 60000, this.delay, ...this.arg);
     }
-    static everyHour(){
-        return setTimeout(this.#mainCallback, this.delay, this.callback, 3600000, this.delay, ...this.arg);
-    }
     static everyFiveMinutes(){
         return setTimeout(this.#mainCallback, this.delay, this.callback, 300000, this.delay, ...this.arg);
     }
     static everyTenMinutes(){
         return setTimeout(this.#mainCallback, this.delay, this.callback, 600000, this.delay, ...this.arg);
     }
+    static everyHour(){
+        return setTimeout(this.#mainCallback, this.delay, this.callback, 3600000, this.delay, ...this.arg);
+    }
 }
 
-module.exports = Scheuler;
+module.exports = Schedule;

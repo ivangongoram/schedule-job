@@ -1,8 +1,8 @@
-const Scheuler = require("../Scheuler");
+const Schedule = require("../Schedule");
 
-Scheuler.job(test1).everyMinute();
-Scheuler.job(test2).wait(5000).everyMinute();
-Scheuler.job(test3, 'Hello', 'world!').wait(10000).everyMinute();
+Schedule.job(test1).everyMinute();
+Schedule.job(test2).wait(5000).everyMinute();
+Schedule.job(test3, 'Hello', 'world!').wait(10000).everyMinute();
 
 function test1() {
     console.log('Test 1');
