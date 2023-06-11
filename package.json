@@ -7,9 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
+    "scheduler",
+    "cronjob",
     "cron",
     "job",
-    "scheduler",
     "time",
     "delay"
   ],
