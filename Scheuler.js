@@ -1,21 +1,21 @@
 class Scheuler
 {
     static callback;
-    static #delay;
+    static delay;
 
     static job(callback){
         this.callback = callback;
-        this.#delay = 0;
+        this.delay = 0;
         return this;
     }
-    static #mainCallback(callback, time){
-        if (Scheuler.#delay > 0){
+    static #mainCallback(callback, time, delay){
+        if (delay > 0) {
             callback();
         }
         setInterval(callback, time);
     }
-    static delay(time){
-        this.#delay = time;
+    static wait(ms){
+        this.delay = ms;
         return this;
     }
     static nextTenMinutes(){
@@ -26,20 +26,20 @@ class Scheuler
         nextTenMinutes.setMinutes(minutes + remainingMinutes);
         nextTenMinutes.setSeconds(0);
         nextTenMinutes.setMilliseconds(0);
-        this.#delay = nextTenMinutes.getTime() - now.getTime();
+        this.delay = nextTenMinutes.getTime() - now.getTime();
         return this;
     }
     static everyMinute(){
-        return setTimeout(this.#mainCallback, this.#delay, this.callback, 60000);
+        return setTimeout(this.#mainCallback, this.delay, this.callback, 60000, this.delay);
     }
     static everyHour(){
-        return setTimeout(this.#mainCallback, this.#delay, this.callback, 3600000);
+        return setTimeout(this.#mainCallback, this.delay, this.callback, 3600000, this.delay);
     }
     static everyFiveMinutes(){
-        return setTimeout(this.#mainCallback, this.#delay, this.callback, 300000);
+        return setTimeout(this.#mainCallback, this.delay, this.callback, 300000, this.delay);
     }
     static everyTenMinutes(){
-        return setTimeout(this.#mainCallback, this.#delay, this.callback, 600000);
+        return setTimeout(this.#mainCallback, this.delay, this.callback, 600000, this.delay);
     }
 }
 
