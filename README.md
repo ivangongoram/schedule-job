@@ -1,4 +1,4 @@
-# Schedule Job
+# Schedule Pro
 
 1. [Introduction](#introduction)
 2. [Schedule Sync Options](#schedule-sync-options)
@@ -6,7 +6,7 @@
 4. [Examples](#examples)
 
 ## Introduction
-Schedule-Job is a powerful and user-friendly Node.js library designed to effortlessly manage cron jobs. With its intuitive interface,
+Schedule-Pro is a powerful and user-friendly Node.js library designed to effortlessly manage cron jobs. With its intuitive interface,
 it simplifies the implementation of scheduling recurring tasks, automating background processes, and executing time-based
 operations.
 

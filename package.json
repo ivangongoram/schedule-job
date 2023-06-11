@@ -1,5 +1,5 @@
 {
-  "name": "schedule-job",
+  "name": "schedule-pro",
   "version": "1.0.0",
   "description": "A powerful and user-friendly Node.js library designed to effortlessly manage cron jobs.",
   "main": "Schedule.js",
@@ -18,10 +18,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ivangongoram/schedule-job.git"
+    "url": "git+https://github.com/ivangongoram/schedule-pro.git"
   },
   "bugs": {
-    "url": "https://github.com/ivangongoram/schedule-job/issues"
+    "url": "https://github.com/ivangongoram/schedule-pro/issues"
   },
-  "homepage": "https://github.com/ivangongoram/schedule-job#readme"
+  "homepage": "https://github.com/ivangongoram/schedule-pro#readme"
 }
