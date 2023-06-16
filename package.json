@@ -1,6 +1,6 @@
 {
   "name": "schedule-pro",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A powerful and user-friendly Node.js library designed to effortlessly manage cron jobs.",
   "main": "Schedule.js",
   "scripts": {
@@ -12,7 +12,8 @@
     "cron",
     "job",
     "time",
-    "delay"
+    "delay",
+    "sync"
   ],
   "author": "Ivan Gongora M <ivan.gongoram@gmail.com> (ivangongoram.com)",
   "license": "MIT",
