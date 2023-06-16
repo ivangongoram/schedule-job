@@ -2,8 +2,7 @@ const Schedule = require("../Schedule");
 
 Schedule.job(test1).everyMinute();
 Schedule.job(test2).wait(5000).everyMinute();
-Schedule.job(test3, 'Hello', 'world!').wait(10000).everyMinute();
-
+Schedule.job(test3, 'Hello', 'world!').wait(10000).everyFifteenMinutes();
 function test1() {
     console.log('Test 1');
 }
