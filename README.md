@@ -4,6 +4,10 @@
 2. [Schedule Sync Options](#schedule-sync-options)
 3. [Schedule Frequency Options](#schedule-frequency-options)
 4. [Examples](#examples)
+   - [Execute simple functions](#execute-simple-functions)
+   - [Execute functions with multiple arguments](#execute-functions-with-multiple-arguments)
+   - [Use sync options](#use-sync-options)
+   - [Run once after wait or sync option](#run-once-after-wait-or-sync-option)
 
 ## Introduction
 Schedule-Pro is a powerful and user-friendly Node.js library designed to effortlessly manage cron jobs. With its intuitive interface,
@@ -20,24 +24,32 @@ operations.
 
 ## Schedule Frequency Options
 
-| Method                | Description                         |
-|-----------------------|-------------------------------------|
-| everyMinute()         | Run the task every minute.          |
-| everyTwoMinutes()     | Run the task every two minutes.     |
-| everyThreeMinutes()   | Run the task every three minutes.   |
-| everyFourMinutes()    | Run the task every four minutes.    |
-| everyFiveMinutes()    | Run the task every five minutes.    |
-| everyTenMinutes()     | Run the task every ten minutes.     |
-| everyFifteenMinutes() | Run the task every fifteen minutes. |
-| everyThirtyMinutes()  | Run the task every thirty minutes.  |
-| everyHour()           | Run the task every hour.            |
-| everyTwoHours()       | Run the task every two hours.       |
-| everyThreeHours()     | Run the task every three hours.     |
-| everyFourHours()      | Run the task every four hour.       |
-| everySixHours()       | Run the task every six hours.       |
-| daily()               | Run the task every day.             |
+| Method                 | Description                         |
+|------------------------|-------------------------------------|
+| once()                 | Run the task once.                  |
+| everyTime( time [ms] ) | Run the task every specified time.  |
+| everyMinute()          | Run the task every minute.          |
+| everyTwoMinutes()      | Run the task every two minutes.     |
+| everyThreeMinutes()    | Run the task every three minutes.   |
+| everyFourMinutes()     | Run the task every four minutes.    |
+| everyFiveMinutes()     | Run the task every five minutes.    |
+| everyTenMinutes()      | Run the task every ten minutes.     |
+| everyFifteenMinutes()  | Run the task every fifteen minutes. |
+| everyThirtyMinutes()   | Run the task every thirty minutes.  |
+| everyHour()            | Run the task every hour.            |
+| everyTwoHours()        | Run the task every two hours.       |
+| everyThreeHours()      | Run the task every three hours.     |
+| everyFourHours()       | Run the task every four hour.       |
+| everySixHours()        | Run the task every six hours.       |
+| daily()                | Run the task every day.             |
 
 ## Examples
+Import the library:
+```js
+const Schedule = require("schedule-pro");
+```
+
+### Execute simple functions:
 ```js
 Schedule.job(test).everyMinute();
 
@@ -46,26 +58,24 @@ function test() {
 }
 ```
 
+### Execute functions with multiple arguments:
 ```js
-Schedule.job(test).wait(5000).everyFiveMinutes();
+Schedule.job(message, 'Hello', 'world!').everyMinute();
 
-function test() {
-    console.log('Test');
-}
-```
-
-```js
-Schedule.job(test, 'Hello', 'world!').wait(10000).everyTenMinutes();
-
-function test(msg1, msg2) {
+function message(msg1, msg2) {
    console.log(msg1, msg2);
 }
 ```
 
+### Use sync options
 ```js
-Schedule.job(test, 'Hello', 'world!').nextTenMinutes().everyHour();
+Schedule.job(message, 'Test', '1').wait(5000).everyFiveMinutes();
+```
 
-function test(msg1, msg2) {
-    console.log(msg1, msg2);
-}
+```js
+Schedule.job(message, 'Test', '2').nextTenMinutes().everyHour();
+```
+### Run once after wait or sync option
+```js
+Schedule.job(message, 'Test', '3').wait(10000).once();
 ```
