@@ -30,6 +30,9 @@ class Schedule
         this.delay = nextTenMinutes.getTime() - now.getTime();
         return this;
     }
+    static once(){
+        return setTimeout(this.callback, this.delay, ...this.arg);
+    }
     static everyMinute(){
         return setTimeout(this.#mainCallback, this.delay, this.callback, 60000, this.delay, ...this.arg);
     }
