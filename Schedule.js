@@ -33,6 +33,9 @@ class Schedule
     static once(){
         return setTimeout(this.callback, this.delay, ...this.arg);
     }
+    static everyTime(ms){
+        return setTimeout(this.#mainCallback, this.delay, this.callback, ms, this.delay, ...this.arg);
+    }
     static everyMinute(){
         return setTimeout(this.#mainCallback, this.delay, this.callback, 60000, this.delay, ...this.arg);
     }
