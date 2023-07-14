@@ -1,15 +1,10 @@
 const Schedule = require("../Schedule");
 
-Schedule.job(test1).everyMinute();
-Schedule.job(test2).wait(5000).everyMinute();
-Schedule.job(test3, 'Hello', 'world!').wait(10000).everyFifteenMinutes();
-function test1() {
-    console.log('Test 1');
-}
-function test2() {
-    console.log('Test 2');
-}
+Schedule.job(message, 'Test', '1').everyMinute();
+Schedule.job(message, 'Test', '2').wait(5000).everyMinute();
+Schedule.job(message, 'Test', '3').wait(10000).everyFifteenMinutes();
+Schedule.job(message, 'Test', '4').wait(2000).once();
 
-function test3(msg1, msg2) {
+function message(msg1, msg2) {
     console.log(msg1, msg2);
 }
